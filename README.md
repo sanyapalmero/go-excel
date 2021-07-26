@@ -1,6 +1,6 @@
 # Go excel
 
-## Just for tests golang and xlsx export performance
+## Just for tests golang and xlsx export performance from postgresql
 
 ### Results
 ![Results](images/results.png)
