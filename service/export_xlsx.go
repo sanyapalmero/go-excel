@@ -242,7 +242,7 @@ func main() {
 
 	sheetName := "Sheet1"
 	xlsxFile := createXlsxWithHeader(sheetName)
-	rowsToExport := 100
+	rowsToExport := 300000
 	exportXlsx(xlsxFile, sheetName, rowsToExport)
 
 	duration := time.Since(startTime)
