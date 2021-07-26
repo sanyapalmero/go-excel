@@ -154,6 +154,8 @@ func createXlsxWithHeader(sheetName string) *excelize.File {
 
 func exportXlsx(xlsxFile *excelize.File, sheetName string, rowsToExport int) {
 	db := connectPostgresDatabase()
+	defer db.Close()
+
 	fmt.Println("Starting export data from database")
 
 	sql := fmt.Sprintf("SELECT * FROM import_table LIMIT %d;", rowsToExport)
@@ -232,8 +234,6 @@ func exportXlsx(xlsxFile *excelize.File, sheetName string, rowsToExport int) {
 
 	err = xlsxFile.SaveAs("../export/export.xlsx")
 	checkError(err)
-
-	defer db.Close()
 }
 
 func main() {
