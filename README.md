@@ -22,7 +22,7 @@ create database go_excel;
 
 Create table and fill test data
 ```bash
-psql -U <user> -d go_excel -f create_database.sql
+psql -U <user> -d go_excel -f create_and_fill_table.sql
 ```
 
 Connect database
